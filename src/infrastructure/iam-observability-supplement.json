@@ -1,0 +1,18 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ApplicationSignalsObservability",
+      "Effect": "Allow",
+      "Action": [
+        "application-signals:StartDiscovery",
+        "application-signals:GetService",
+        "application-signals:ListServices",
+        "application-signals:ListServiceLevelObjectives",
+        "application-signals:GetServiceLevelObjective",
+        "oam:ListSinks"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

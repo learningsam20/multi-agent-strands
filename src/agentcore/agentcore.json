@@ -1,0 +1,101 @@
+{
+  "$schema": "https://schema.agentcore.aws.dev/v1/agentcore.json",
+  "name": "udacity",
+  "version": 1,
+  "managedBy": "CDK",
+  "tags": {
+    "agentcore:created-by": "agentcore-cli",
+    "agentcore:project-name": "udacity"
+  },
+  "runtimes": [
+    {
+      "name": "agentcore_runtime",
+      "description": "NovaMart multi-agent customer support system (Strands Agents on AgentCore Runtime)",
+      "build": "CodeZip",
+      "entrypoint": "agent_orchestrator.py",
+      "codeLocation": "build/runtime/",
+      "runtimeVersion": "PYTHON_3_12",
+      "networkMode": "PUBLIC",
+      "protocol": "HTTP",
+      "instrumentation": {
+        "enableOtel": false
+      },
+      "executionRoleArn": "arn:aws:iam::426084279197:role/udacity-agentcore-agentcore-role",
+      "envVars": [
+        {
+          "name": "AWS_REGION",
+          "value": "us-east-1"
+        },
+        {
+          "name": "PROJECT_NAME",
+          "value": "udacity-agentcore"
+        },
+        {
+          "name": "RETURNS_KB_ID",
+          "value": "3LJ8E2KTCF"
+        },
+        {
+          "name": "SHIPPING_KB_ID",
+          "value": "ZMGHETKBQP"
+        },
+        {
+          "name": "WARRANTY_KB_ID",
+          "value": "GUE2WBDD9K"
+        },
+        {
+          "name": "AGENT_LOG_GROUP",
+          "value": "/aws/bedrock/agentcore/udacity-agentcore"
+        },
+        {
+          "name": "GUARDRAIL_ID",
+          "value": "4y545vcpl73u"
+        },
+        {
+          "name": "GUARDRAIL_VERSION",
+          "value": "1"
+        },
+        {
+          "name": "USE_BEDROCK_MANTLE",
+          "value": "true"
+        },
+        {
+          "name": "ORCHESTRATOR_MODEL_ID",
+          "value": "nvidia.nemotron-nano-3-30b"
+        },
+        {
+          "name": "WORKER_MODEL_ID",
+          "value": "nvidia.nemotron-super-3-120b"
+        },
+        {
+          "name": "AGENT_LOG_LEVEL",
+          "value": "INFO"
+        },
+        {
+          "name": "AGENT_LOG_TO_CLOUDWATCH",
+          "value": "true"
+        },
+        {
+          "name": "AGENT_TRACING_ENABLED",
+          "value": "true"
+        },
+        {
+          "name": "AGENT_TRACE_SAMPLING_RATE",
+          "value": "1.0"
+        }
+      ]
+    }
+  ],
+  "memories": [],
+  "knowledgeBases": [],
+  "credentials": [],
+  "evaluators": [],
+  "onlineEvalConfigs": [],
+  "agentCoreGateways": [],
+  "policyEngines": [],
+  "configBundles": [],
+  "abTests": [],
+  "harnesses": [],
+  "datasets": [],
+  "capacityProviders": [],
+  "payments": []
+}

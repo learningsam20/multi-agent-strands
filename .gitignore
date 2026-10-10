@@ -1,0 +1,64 @@
+# ─────────────────────────────────────────────
+# Course / private docs (keep local only)
+# ─────────────────────────────────────────────
+docs/instructions.md
+docs/rubric.md
+docs/background.md
+docs/image.png
+docs/image-1.png
+docs/image-2.png
+docs/*.png
+docs/*.jpg
+docs/*.jpeg
+docs/*.gif
+docs/*.webp
+docs/*.pdf
+
+# ─────────────────────────────────────────────
+# Python
+# ─────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# ─────────────────────────────────────────────
+# OS / IDE
+# ─────────────────────────────────────────────
+.DS_Store
+.idea/
+.vscode/
+*.swp
+.claude/
+
+# ─────────────────────────────────────────────
+# Build / deploy artifacts
+# ─────────────────────────────────────────────
+src/build/
+build/
+payload.json
+response.json
+*.zip
+
+# ─────────────────────────────────────────────
+# AgentCore CLI artifacts
+# ─────────────────────────────────────────────
+src/agentcore/.cli/
+src/agentcore/.cache/
+src/agentcore/agentcore_runtime/
+src/agentcore/*.zip
+src/agentcore/.env.local
+src/agentcore/cdk/node_modules/
+src/agentcore/cdk/cdk.out/
+src/agentcore/cdk/dist/
+
+# ─────────────────────────────────────────────
+# Logs (submission screenshots in output/screenshots/ are tracked)
+# ─────────────────────────────────────────────
+*.log
+*.tmp

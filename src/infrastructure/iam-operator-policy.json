@@ -1,0 +1,291 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "STSIdentity",
+      "Effect": "Allow",
+      "Action": [
+        "sts:GetCallerIdentity",
+        "sts:GetServiceBearerToken"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "CloudFormationStacks",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:UpdateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:DescribeStackResources",
+        "cloudformation:DescribeStackResource",
+        "cloudformation:GetTemplate",
+        "cloudformation:GetTemplateSummary",
+        "cloudformation:ListStacks",
+        "cloudformation:ListExports",
+        "cloudformation:ListImports",
+        "cloudformation:CreateChangeSet",
+        "cloudformation:DescribeChangeSet",
+        "cloudformation:ExecuteChangeSet",
+        "cloudformation:DeleteChangeSet",
+        "cloudformation:GetStackPolicy",
+        "cloudformation:SetStackPolicy",
+        "cloudformation:TagResource",
+        "cloudformation:UntagResource",
+        "cloudformation:ValidateTemplate"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "IAMForStackAndAgentCore",
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:GetRole",
+        "iam:GetRolePolicy",
+        "iam:PutRolePolicy",
+        "iam:DeleteRolePolicy",
+        "iam:AttachRolePolicy",
+        "iam:DetachRolePolicy",
+        "iam:TagRole",
+        "iam:UntagRole",
+        "iam:ListRolePolicies",
+        "iam:ListAttachedRolePolicies",
+        "iam:ListInstanceProfilesForRole",
+        "iam:PassRole",
+        "iam:CreatePolicy",
+        "iam:DeletePolicy",
+        "iam:GetPolicy",
+        "iam:GetPolicyVersion",
+        "iam:CreatePolicyVersion",
+        "iam:DeletePolicyVersion",
+        "iam:ListPolicyVersions",
+        "iam:CreateServiceLinkedRole",
+        "iam:GetInstanceProfile",
+        "iam:CreateInstanceProfile",
+        "iam:DeleteInstanceProfile",
+        "iam:AddRoleToInstanceProfile",
+        "iam:RemoveRoleFromInstanceProfile"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "DynamoDBTables",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:CreateTable",
+        "dynamodb:UpdateTable",
+        "dynamodb:DeleteTable",
+        "dynamodb:DescribeTable",
+        "dynamodb:DescribeTimeToLive",
+        "dynamodb:UpdateTimeToLive",
+        "dynamodb:ListTables",
+        "dynamodb:TagResource",
+        "dynamodb:UntagResource",
+        "dynamodb:ListTagsOfResource",
+        "dynamodb:GetItem",
+        "dynamodb:PutItem",
+        "dynamodb:UpdateItem",
+        "dynamodb:DeleteItem",
+        "dynamodb:Query",
+        "dynamodb:Scan",
+        "dynamodb:BatchWriteItem",
+        "dynamodb:BatchGetItem",
+        "dynamodb:DescribeStream",
+        "dynamodb:ListStreams"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "S3PolicyAndCdkAssets",
+      "Effect": "Allow",
+      "Action": [
+        "s3:CreateBucket",
+        "s3:DeleteBucket",
+        "s3:ListBucket",
+        "s3:ListAllMyBuckets",
+        "s3:GetBucketLocation",
+        "s3:GetBucketPolicy",
+        "s3:PutBucketPolicy",
+        "s3:DeleteBucketPolicy",
+        "s3:GetBucketTagging",
+        "s3:PutBucketTagging",
+        "s3:GetBucketVersioning",
+        "s3:PutBucketVersioning",
+        "s3:GetBucketPublicAccessBlock",
+        "s3:PutBucketPublicAccessBlock",
+        "s3:GetEncryptionConfiguration",
+        "s3:PutEncryptionConfiguration",
+        "s3:GetLifecycleConfiguration",
+        "s3:PutLifecycleConfiguration",
+        "s3:GetObject",
+        "s3:GetObjectVersion",
+        "s3:PutObject",
+        "s3:DeleteObject",
+        "s3:DeleteObjectVersion",
+        "s3:ListBucketVersions",
+        "s3:GetBucketCors",
+        "s3:PutBucketCors"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "S3VectorsForKnowledgeBases",
+      "Effect": "Allow",
+      "Action": [
+        "s3vectors:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "BedrockModelsGuardrailsAndKBs",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeModel",
+        "bedrock:InvokeModelWithResponseStream",
+        "bedrock:ApplyGuardrail",
+        "bedrock:CreateGuardrail",
+        "bedrock:UpdateGuardrail",
+        "bedrock:DeleteGuardrail",
+        "bedrock:GetGuardrail",
+        "bedrock:ListGuardrails",
+        "bedrock:CreateGuardrailVersion",
+        "bedrock:ListFoundationModels",
+        "bedrock:GetFoundationModel",
+        "bedrock:CreateKnowledgeBase",
+        "bedrock:UpdateKnowledgeBase",
+        "bedrock:DeleteKnowledgeBase",
+        "bedrock:GetKnowledgeBase",
+        "bedrock:ListKnowledgeBases",
+        "bedrock:CreateDataSource",
+        "bedrock:UpdateDataSource",
+        "bedrock:DeleteDataSource",
+        "bedrock:GetDataSource",
+        "bedrock:ListDataSources",
+        "bedrock:StartIngestionJob",
+        "bedrock:GetIngestionJob",
+        "bedrock:ListIngestionJobs",
+        "bedrock:AssociateAgentKnowledgeBase",
+        "bedrock:Retrieve",
+        "bedrock:RetrieveAndGenerate",
+        "bedrock:TagResource",
+        "bedrock:UntagResource",
+        "bedrock:ListTagsForResource",
+        "bedrock:AgenticRetrieveStream"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "BedrockAgentCoreControlAndRuntime",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock-agentcore:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "CloudWatchLogs",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:DeleteLogGroup",
+        "logs:DescribeLogGroups",
+        "logs:DescribeLogStreams",
+        "logs:CreateLogStream",
+        "logs:DeleteLogStream",
+        "logs:PutLogEvents",
+        "logs:GetLogEvents",
+        "logs:FilterLogEvents",
+        "logs:PutRetentionPolicy",
+        "logs:DeleteRetentionPolicy",
+        "logs:TagLogGroup",
+        "logs:UntagLogGroup",
+        "logs:ListTagsLogGroup",
+        "logs:PutResourcePolicy",
+        "logs:DeleteResourcePolicy",
+        "logs:DescribeResourcePolicies",
+        "logs:CreateLogDelivery",
+        "logs:DeleteLogDelivery",
+        "logs:DescribeDeliveries",
+        "logs:GetLogDelivery",
+        "logs:UpdateLogDelivery",
+        "logs:PutAccountPolicy",
+        "logs:DescribeAccountPolicies",
+        "logs:DeleteAccountPolicy",
+        "logs:DescribeAccountPolicies"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "XRayAndTransactionSearch",
+      "Effect": "Allow",
+      "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords",
+        "xray:GetTraceSummaries",
+        "xray:BatchGetTraces",
+        "xray:GetServiceGraph",
+        "xray:GetTraceGraph",
+        "xray:GetSamplingRules",
+        "xray:GetSamplingTargets",
+        "xray:GetTraceSegmentDestination",
+        "xray:UpdateTraceSegmentDestination",
+        "xray:GetIndexingRules",
+        "xray:UpdateIndexingRule",
+        "xray:PutResourcePolicy",
+        "xray:DeleteResourcePolicy",
+        "xray:ListResourcePolicies"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "SSMParameterStoreForCdk",
+      "Effect": "Allow",
+      "Action": [
+        "ssm:GetParameter",
+        "ssm:GetParameters",
+        "ssm:PutParameter",
+        "ssm:DeleteParameter",
+        "ssm:AddTagsToResource",
+        "ssm:RemoveTagsFromResource"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ECRForCdkBootstrap",
+      "Effect": "Allow",
+      "Action": [
+        "ecr:CreateRepository",
+        "ecr:DeleteRepository",
+        "ecr:DescribeRepositories",
+        "ecr:SetRepositoryPolicy",
+        "ecr:GetRepositoryPolicy",
+        "ecr:PutLifecyclePolicy",
+        "ecr:GetLifecyclePolicy",
+        "ecr:PutImage",
+        "ecr:InitiateLayerUpload",
+        "ecr:UploadLayerPart",
+        "ecr:CompleteLayerUpload",
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:BatchGetImage",
+        "ecr:GetAuthorizationToken",
+        "ecr:TagResource",
+        "ecr:UntagResource"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "OptionalGatewayLambda",
+      "Effect": "Allow",
+      "Action": [
+        "lambda:GetFunction",
+        "lambda:ListFunctions"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
